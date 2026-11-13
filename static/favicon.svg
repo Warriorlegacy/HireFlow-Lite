@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="HireFlow Lite">
+  <rect width="64" height="64" rx="14" fill="#1d4d3b"/>
+  <rect x="7" y="7" width="50" height="50" rx="9" fill="none" stroke="#f7f5f0" stroke-opacity="0.28" stroke-width="1.5"/>
+  <path d="M22 45V19h5.5v10.2h9V19H42v26h-5.5V34.1h-9V45H22Z" fill="#f7f5f0"/>
+  <circle cx="48" cy="16" r="2.5" fill="#c9a227"/>
+</svg>

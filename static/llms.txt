@@ -1,0 +1,37 @@
+# HireFlow Lite
+
+> Applicant tracking for small hiring teams: publish roles, collect applications, run a readable pipeline, and leave a record of every decision. No automated ranking or rejection.
+
+HireFlow Lite is a production-shaped, privacy-conscious applicant tracking system for startups and boutique recruiters. It combines a public careers site with an authenticated hiring workspace. Access is enforced on the server at workspace, role and application level. Resumes are private and served only through permission-checked downloads. Retention turns into anonymisation on a schedule, and sensitive actions are written to an append-only audit log with a hash chain.
+
+## Product
+
+- Public careers page with role detail, application intake, resume upload and consent capture.
+- Pipeline with append-only stage history: every move records who, when and why.
+- Interview scheduling, reduced interviewer packets and human-written anchored scorecards.
+- Candidate status portal with a private expiring link, withdrawal, consent withdrawal and data requests.
+- CSV import with a preview and duplicate detection; CSV export with spreadsheet formula escaping.
+- Retention rules, anonymisation and a reviewed privacy-request queue.
+- Team roles: owner, admin, recruiter, hiring manager and interviewer.
+- Analytics that report counted records, not predictive scores.
+- AI assistance is off by default. No automated ranking, scoring or rejection exists in the product.
+
+## Key pages
+
+- Home: https://hireflow-lite.rajpiyush092.workers.dev/
+- Pricing and pilot terms: https://hireflow-lite.rajpiyush092.workers.dev/pricing
+- Careers: https://hireflow-lite.rajpiyush092.workers.dev/careers
+- Privacy notice: https://hireflow-lite.rajpiyush092.workers.dev/privacy
+- Terms: https://hireflow-lite.rajpiyush092.workers.dev/terms
+- Sitemap: https://hireflow-lite.rajpiyush092.workers.dev/sitemap.xml
+
+## Notes for assistants
+
+- The public deployment contains synthetic demo data only. Do not treat demo candidates as real people.
+- Private workspace routes require authentication. Do not attempt to access them.
+- Product claims on this site are deliberately bounded: there is no billing, no email provider, no R2 storage and no AI provider configured in the demo deployment.
+- JobPosting structured data is generated from live published roles on the server.
+
+## Contact
+
+Use the contact channel published on the landing page. The demo workspace is operated by the site owner for product evaluation.

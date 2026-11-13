@@ -1,0 +1,47 @@
+{
+  "name": "hireflow-lite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HireFlow Lite - privacy-conscious applicant tracking for startups and boutique recruiters",
+  "scripts": {
+    "dev": "vite",
+    "dev:worker": "wrangler dev",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "db:local": "wrangler d1 execute hireflow-db --local --file=server/schema.sql",
+    "seed:local": "wrangler d1 execute hireflow-db --local --file=server/seed.sql",
+    "db:remote": "wrangler d1 execute hireflow-db --remote --file=server/schema.sql",
+    "seed:remote": "wrangler d1 execute hireflow-db --remote --file=server/seed.sql",
+    "deploy": "npm run build && wrangler deploy",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "hono": "^4.6.14",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261110.1",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "sql.js": "^1.13.0",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8",
+    "wrangler": "^4.161.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

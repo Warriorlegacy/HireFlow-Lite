@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /login
+Disallow: /accept-invite
+Disallow: /portal/
+Disallow: /jobs/
+Disallow: /applications/
+Disallow: /candidates
+Disallow: /interviews/
+Disallow: /analytics
+Disallow: /templates
+Disallow: /import-export
+Disallow: /team
+Disallow: /settings
+Disallow: /audit
+Disallow: /privacy-requests
+
+Sitemap: https://hireflow-lite.rajpiyush092.workers.dev/sitemap.xml

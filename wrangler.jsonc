@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hireflow-lite",
+  "main": "server/index.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/careers", "/careers/*", "/sitemap.xml"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hireflow-db",
+      "database_id": "5fbfa9d3-fff0-4543-aa8f-ed4a0464e91d",
+      "migrations_dir": "server/migrations"
+    }
+  ],
+  // R2 is not enabled on this account. Resumes use the private D1 blob fallback.
+  // To switch to R2: enable R2, create bucket hireflow-resumes, then uncomment:
+  // "r2_buckets": [{ "binding": "FILES", "bucket_name": "hireflow-resumes" }],
+  "vars": {
+    "ENVIRONMENT": "production",
+    "ALLOW_DEMO": "true",
+    "APP_URL": "https://hireflow-lite.rajpiyush092.workers.dev",
+    "AI_ENABLED": "false"
+  }
+}
