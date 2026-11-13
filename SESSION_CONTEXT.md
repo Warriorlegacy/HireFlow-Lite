@@ -2,7 +2,8 @@
 
 *Last Updated:* 2026-11-14 00:00 IST  
 *Status:* **PRODUCTION-READY, DEPLOYED & FULLY VERIFIED**  
-*Live Application URL:* **https://hireflow-lite.rajpiyush092.workers.dev**
+*Live Application URL:* **https://hireflow-lite.rajpiyush092.workers.dev**  
+*Repository:* **https://github.com/Warriorlegacy/HireFlow-Lite**
 
 ---
 
