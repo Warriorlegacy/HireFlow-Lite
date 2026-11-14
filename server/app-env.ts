@@ -7,6 +7,7 @@ export interface AppEnv {
     FILES?: R2Bucket;
     ENVIRONMENT?: string;
     ALLOW_DEMO?: string;
+    DEMO_SECRET?: string;
     APP_URL?: string;
     AI_ENABLED?: string;
     GEMINI_API_KEY?: string;

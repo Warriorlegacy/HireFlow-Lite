@@ -90,12 +90,20 @@ authRouter.get('/me', (c) => {
   });
 });
 
-// Demo persona switcher, active only while ALLOW_DEMO is not false.
+// Demo persona switcher.
+// Gated for production safety: disabled unless ALLOW_DEMO !== 'false'.
+// When DEMO_SECRET is configured, the caller must supply the matching secret,
+// so demo mode cannot be activated by anonymous visitors on real candidate data.
 authRouter.post('/demo-switch', async (c) => {
   if (c.env.ALLOW_DEMO === 'false') {
     return fail(c, 403, 'DEMO_DISABLED', 'Demo switching is disabled in this environment.');
   }
   const body = await c.req.json().catch(() => ({}));
+  if (c.env.DEMO_SECRET) {
+    if (!body || body.secret !== c.env.DEMO_SECRET) {
+      return fail(c, 403, 'DEMO_SECRET_REQUIRED', 'A valid demo secret is required to switch personas.');
+    }
+  }
   const targetEmail = String(body.email || 'owner@hireflow.demo').toLowerCase().trim();
   const db = c.get('db');
   const user = await db.get<any>('SELECT id, email, full_name, is_active FROM users WHERE email = ?', [targetEmail]);

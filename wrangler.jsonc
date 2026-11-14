@@ -25,6 +25,7 @@
   "vars": {
     "ENVIRONMENT": "production",
     "ALLOW_DEMO": "true",
+    "DEMO_SECRET": "",
     "APP_URL": "https://hireflow-lite.rajpiyush092.workers.dev",
     "AI_ENABLED": "false"
   }
